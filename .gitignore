@@ -11,3 +11,7 @@ target/
 atlassian-ide-plugin.xml
 
 
+
+/jars
+
+/artifacts
