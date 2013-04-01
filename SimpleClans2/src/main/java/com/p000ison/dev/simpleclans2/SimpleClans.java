@@ -52,8 +52,6 @@ import com.p000ison.dev.simpleclans2.exceptions.handling.ExceptionReporterTask;
 import com.p000ison.dev.simpleclans2.language.Language;
 import com.p000ison.dev.simpleclans2.listeners.SCEntityListener;
 import com.p000ison.dev.simpleclans2.listeners.SCPlayerListener;
-import com.p000ison.dev.simpleclans2.metrics.OfflinePlotter;
-import com.p000ison.dev.simpleclans2.metrics.OnlinePlotter;
 import com.p000ison.dev.simpleclans2.requests.CraftRequestManager;
 import com.p000ison.dev.simpleclans2.settings.SettingsManager;
 import com.p000ison.dev.simpleclans2.support.PreciousStonesSupport;
@@ -75,7 +73,6 @@ import org.bukkit.permissions.PermissionDefault;
 import org.bukkit.plugin.PluginManager;
 import org.bukkit.plugin.RegisteredServiceProvider;
 import org.bukkit.plugin.java.JavaPlugin;
-import org.mcstats.Metrics;
 
 import java.io.File;
 import java.io.IOException;
@@ -147,8 +144,6 @@ public class SimpleClans extends JavaPlugin implements SCCore {
 
             getClanPlayerManager().updateOnlinePlayers();
 
-            setupMetrics();
-
         } catch (RuntimeException e) {
             Logging.debug(e, "Failed at loading SimpleClans! Disabling...", true);
             if (exceptionReporterTask != null) {
@@ -207,40 +202,6 @@ public class SimpleClans extends JavaPlugin implements SCCore {
 //    public boolean update() {
 //        return jenkins != null && jenkins.update();
 //    }
-
-    public void setupMetrics() {
-        try {
-            Metrics metrics = new Metrics(this);
-            Metrics.Graph authGraph = metrics.createGraph("How many servers run in offline mode?");
-
-            if (getServer().getOnlineMode()) {
-                authGraph.addPlotter(new OnlinePlotter());
-            } else {
-                authGraph.addPlotter(new OfflinePlotter());
-            }
-            Metrics.Graph databaseEngines = metrics.createGraph("Database engines");
-
-            if (getDataManager().getDatabase() instanceof MySQLDatabase) {
-                databaseEngines.addPlotter(new Metrics.Plotter("MySQL") {
-                    @Override
-                    public int getValue() {
-                        return 1;
-                    }
-                });
-            } else if (getDataManager().getDatabase() instanceof SQLiteDatabase) {
-                databaseEngines.addPlotter(new Metrics.Plotter("SQLite") {
-                    @Override
-                    public int getValue() {
-                        return 1;
-                    }
-                });
-            }
-
-            metrics.start();
-        } catch (IOException e) {
-            Logging.debug(e, true);
-        }
-    }
 
     @Override
     public void onDisable() {
