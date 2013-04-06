@@ -1,167 +1,167 @@
 name: SimpleClans2
 main: com.p000ison.dev.simpleclans2.SimpleClans
 authors: [p000ison]
-description: 'SimpleClans2 is a clan-management plugin.'
+description: 'SimpleClans2是一个家族管理插件。'
 load: 'POSTWORLD'
-version: 'unknown-version'
+version: 'nekocraft-version'
 website: 'http://dev.bukkit.org/server-mods/simpleclans/'
 prefix: 'SC'
 commands:
   sc:
-    description: Default clan command
+    description: 默认家族命令
   rank:
-    description: Default command for rank management
+    description: 默认家族命令等级管理
   bb:
-    description: Default bb management
+    description: 默认家族公告板管理
 permissions:
   simpleclans.admin.permissions:
-    description: Can grant clans permissions
+    description: 可以授予家族权限
   simpleclans.admin.reload:
-    description: Can reload configuration
+    description: 可以重新载入配置
   simpleclans.admin.all-seeing-eye:
-    description: Can see all clan chats
+    description: 可以看到所有的家族聊天
   simpleclans.mod.verify:
-    description: Can verify simpleclans
+    description: 可以验证插件
   simpleclans.mod.ban:
-    description: Can ban players from the entire plugin
+    description: 可以禁止玩家从整个插件
   simpleclans.mod.unban:
-    description: Can unban players from the entire plugin
+    description: 可解除禁止玩家从整个插件
   simpleclans.mod.disband:
-    description: Can disband any clan
+    description: 可以解散任何家族
   simpleclans.mod.globalff:
-    description: Can turn off global friendly fire protection
+    description: 可以关闭全局队友伤害保护
   simpleclans.mod.nohide:
-    description: Messages from these players cannot be hidden via chat commands
+    description: 这些玩家不能隐藏消息聊天命令
   simpleclans.mod.home:
-    description: Can set other clan's home
+    description: 可以设置其他家族的家
   simpleclans.mod.bypass:
-    description: Can bypass restrictions
+    description: 可以绕过限制
   simpleclans.mod.nopvpinwar:
-    description: Can bypass pvp in wars
+    description: 可以在战争中绕过PVP
   simpleclans.anyone.list:
-    description: Can list simpleclans
+    description: 可以列出家族
   simpleclans.anyone.profile:
-    description: Can view a clan's profile
+    description: 可以查看一个家族的资料
   simpleclans.anyone.roster:
-    description: Can veiw a clan's member list
+    description: 可以查看家族成员名单
   simpleclans.anyone.lookup:
-    description: Can lookup a player's info
+    description: 可以查看玩家的信息
   simpleclans.anyone.leaderboard:
-    description: Can view the leaderboard
+    description: 可以查看排行榜
   simpleclans.anyone.alliances:
-    description: Can view alliances by clan
+    description: 可以查看家族的联盟
   simpleclans.anyone.rivalries:
-    description: Can view rivalries by clan
+    description: 可以查看家族的敌对
   simpleclans.member.profile:
-    description: Can view his own clan's profile
+    description: 可以查看他自己的氏族的个人资料
   simpleclans.member.roster:
-    description: Can view his own clan's member list
+    description: 可以查看他自己的氏族成员列表
   simpleclans.member.lookup:
-    description: Can view his own player info
+    description: 可以查看自己的玩家信息
   simpleclans.member.vitals:
-    description: Can view his clan's vitals
+    description: 可以查看他的家族的命脉
   simpleclans.member.coords:
-    description: Can view his clan's coords
+    description: 可以查看他的家族的坐标位置
   simpleclans.member.stats:
-    description: Can view his simpleclans stats
+    description: 可以查看他的家族统计
   simpleclans.member.bb:
-    description: Can view his clan's bulletin board
+    description: 可以查看他的家族的公告板
   simpleclans.member.bb-add:
-    description: Can add to his clan's bulletin board
+    description: 可以添加到他的家族的公告板
   simpleclans.member.bb-clear:
-    description: Can clear the bulletin board
+    description: 可以清除公告板
   simpleclans.member.toggle.bb:
-    description: Can toggle bb on/off
+    description: 可以开/关切换公告板
   simpleclans.member.ff:
-    description: Can toggle his own friendly fire
+    description: 可以切换自己家族的队友伤害
   simpleclans.member.resign:
-    description: Can resign from his clan
+    description: 可从他的家族辞职
   simpleclans.member.ally:
-    description: Can use ally chat
+    description: 可以使用盟友聊天
   simpleclans.member.can-join:
-    description: Can join clans
+    description: 可以加入家族
   simpleclans.member.home:
-    description: Can tp to home base
+    description: 可以传送到家族本部
   simpleclans.leader.create:
-    description: Can create simpleclans
+    description: 可以创建家族
   simpleclans.leader.home-set:
-    description: Can set home base
+    description: 可设置家族本部
   simpleclans.leader.home-regroup:
-    description: Can tp entire clan to homebase
+    description: 可以传送整个家族到大本营
   simpleclans.leader.ally:
-    description: Can ally his clan with other simpleclans
+    description: 可以将他的家族与其他家族创建联盟
   simpleclans.leader.rival:
-    description: Can start a rivalry with another clan
+    description: 可以开始一场战争与另一个家族
   simpleclans.leader.modtag:
-    description: Can modify his clan's tag
+    description: 可以修改他的家族的标签
   simpleclans.leader.cape:
-    description: Can set his clan's cape url
+    description: 可以设置他的家族的披风网址
   simpleclans.member.toggle.cape:
-    description: Can toggle his cape on/off
+    description: 可以切换斗篷是否显示
   simpleclans.member.kills:
-    description: Can view his and other's kills
+    description: 可以查看他和其他成员的击杀数
   simpleclans.mod.mostkilled:
-    description: Can view his and other's clans mostkilled
+    description: 可以查看他和其他的家族最多的击杀数
   simpleclans.mod.keep-items:
-    description: Can keep items when teleporting home
+    description: 可以在传送回家时保持物品
   simpleclans.leader.invite:
-    description: Can invite players into his clan
+    description: 玩家可以邀请别人到他的家族
   simpleclans.leader.kick:
-    description: Can kick players form his tea,
+    description: 可以从他的团队踢出玩家
   simpleclans.leader.promote:
-    description: Can promote players to clan leaders
+    description: 玩家能推举家族领导人
   simpleclans.leader.promotable:
-    description: Can be promoted to clan leader
+    description: 可以被推举为族长
   simpleclans.leader.demote:
-    description: Can demote clan leaders to normal players
+    description: 可以降级族长到普通玩家
   simpleclans.leader.ff:
-    description: Can toggle his clan's friendly fire
+    description: 可以切换他的家族的队友伤害
   simpleclans.leader.disband:
-    description: Can disband his own clan
+    description: 能解散他自己的氏族
   simpleclans.leader.settrust:
-    description: Can set trust levels for members
+    description: 可以设置成员的信任级别
   simpleclans.leader.war:
-    description: Can start wars
+    description: 可以发动战争
   simpleclans.leader.setrank:
-    description: Can set ranks
+    description: 可以设置职级
   simpleclans.admin.convert:
-    description: Can convert from old versions
+    description: 可以从旧版本转换
   simpleclans.admin.info:
-    description: Can view information about SC
+    description: 可以查看SC信息
   simpleclans.admin.save:
-    description: Can force a save
+    description: 可以强制保存
   simpleclans.admin.upgrade:
-    description: Can upgrade the plugin
+    description: 可以升级插件
   simpleclans.member.bank.balance:
-    description: Can view the balance of the clan
+    description: 可以查看家族的存款
   simpleclans.member.bank.deposit:
-    description: Can deposit money in the clan bank
+    description: 可以在家族银行存钱
   simpleclans.member.bank.withdraw:
-    description: Can withdraw money from the clan bank
+    description: 可以从家族银行取钱
   simpleclans.leader.rank.permissions.add:
-    description: Can add permissions to a rank
+    description: 可以将权限添加到一个等级
   simpleclans.leader.rank.permissions.remove:
-    description: Can remove permissions from a rank
+    description: 可以从一个等级删除权限
   simpleclans.leader.rank.permissions.list:
-    description: Can list all available permissions
+    description: 可以列出所有可用的权限
   simpleclans.leader.rank.create:
-    description: Can create a new rank
+    description: 可以创建一个新的等级
   simpleclans.leader.rank.delete:
-    description: Can delete a new rank
+    description: 可以删除一个新的等级
   simpleclans.leader.rank.detail:
-    description: Can view details about a rank
+    description: 可以查看一个等级的详细信息
   simpleclans.leader.rank.assign:
-    description: Can assign a rank to a user
+    description: 可以指定用户为一个等级
   simpleclans.leader.rank.list:
-    description: Can list all the ranks
+    description: 可以列出所有的等级
   simpleclans.member.accept:
-    description: Can accept
+    description: 可以接受
   simpleclans.member.deny:
-    description: Can deny
+    description: 可以拒绝
   simpleclans.member.abstain:
-    description: Can abstain
+    description: 可以选择放弃
   simpleclans.mod.*:
-    description: Permissions for moderators
+    description: 巡查员的权限
     default: op
     children:
       simpleclans.mod.verify: true
@@ -175,7 +175,7 @@ permissions:
       simpleclans.mod.nopvpinwar: true
       simpleclans.mod.unban: true
   simpleclans.anyone.*:
-    description: Permissions for anyone
+    description: 任何人的权限
     default: true
     children:
       simpleclans.anyone.list: true
@@ -187,7 +187,7 @@ permissions:
       simpleclans.anyone.rivalries: true
       simpleclans.anyone.kills: true
   simpleclans.member.*:
-    description: Permissions for those who can be clan members
+    description: 可以成为家族成员的玩家的权限
     default: false
     children:
       simpleclans.anyone.*: true
@@ -215,7 +215,7 @@ permissions:
       simpleclans.member.bank.deposit: true
       simpleclans.member.bank.withdraw: true
   simpleclans.leader.*:
-    description: Permissions for those who can be clan leaders
+    description: 可以成为组长的玩家的权限
     default: false
     children:
       simpleclans.member.*: true
@@ -245,7 +245,7 @@ permissions:
       simpleclans.leader.rank.detail: true
       simpleclans.leader.rank.list: true
   simpleclans.admin.*:
-    description: Permissions for admins
+    description: 管理员的权限
     default: op
     children:
       simpleclans.leader.*: true
